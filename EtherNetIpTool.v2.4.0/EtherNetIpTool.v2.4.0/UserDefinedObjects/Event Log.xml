@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- https://kb.hilscher.com/pages/viewpage.action?pageId=112429261 from 2021-05-11 -->
+<!-- Instances 100-107 for ports 1-8. -->
+<ObjectClass ClassId="0x41" ClassName="Event Log">
+	<Attribute AttributeId="2" AttributeName="State" Length="1" ReadOnly="true" HexDisplay="false">
+		<AttributeValue BitMask="0xff" Value="0" Description="Nonexistent"/>
+		<AttributeValue BitMask="0xff" Value="1" Description="Stopped"/>
+		<AttributeValue BitMask="0xff" Value="2" Description="Empty"/>
+		<AttributeValue BitMask="0xff" Value="3" Description="Available"/>
+		<AttributeValue BitMask="0xff" Value="4" Description="Full/Overwrite"/>
+		<AttributeValue BitMask="0xff" Value="5" Description="Full/Halted"/>
+	</Attribute>
+	<Attribute AttributeId="9" AttributeName="Logged Data Config" Length="1" ReadOnly="false" HexDisplay="true">
+		<AttributeBit BitIndex="0" Description="Time value (data value defined by Time Format class attribute)"/>
+		<AttributeBit BitIndex="1" Description="New event state (data value defined by Event State attribute)"/>
+		<AttributeBit BitIndex="2" Description="Application data"/>
+	</Attribute>
+	<Attribute AttributeId="10" AttributeName="Log Full Action" Length="1" ReadOnly="false" HexDisplay="false">
+		<AttributeValue BitMask="0xff" Value="0" Description="Halt"/>
+		<AttributeValue BitMask="0xff" Value="1" Description="Scroll"/>
+	</Attribute>
+	<Attribute AttributeId="11" AttributeName="Duplicate Event Action" Length="1" ReadOnly="false" HexDisplay="false">
+		<AttributeValue BitMask="0xff" Value="0" Description="Ignore"/>
+		<AttributeValue BitMask="0xff" Value="1" Description="Add"/>
+		<AttributeValue BitMask="0xff" Value="2" Description="Overwrite"/>
+	</Attribute>
+	<Attribute AttributeId="12" AttributeName="Event Log Maximum Size" Length="4" ReadOnly="true" HexDisplay="false"/>
+	<Attribute AttributeId="13" AttributeName="Event Log Size" Length="4" ReadOnly="true" HexDisplay="false"/>
+	<!-- attribute 12 = 8 events; attribute 24 = 4 = "24-bit error format" = 3 bytes -->
+	<!-- Length attribute 14 = 8 events * 3 bytes = 24 bytes -->
+	<Attribute AttributeId="14" AttributeName="Event Log" Length="24" ReadOnly="true" HexDisplay="true"/>
+	<Attribute AttributeId="19" AttributeName="Log Full" Length="1" ReadOnly="true" HexDisplay="false">
+		<AttributeValue BitMask="0xff" Value="0" Description="Log not full"/>
+		<AttributeValue BitMask="0xff" Value="1" Description="Log full"/>
+	</Attribute>
+	<Attribute AttributeId="20" AttributeName="Log Contains Entries" Length="1" ReadOnly="true" HexDisplay="false">
+		<AttributeValue BitMask="0xff" Value="0" Description="Log empty"/>
+		<AttributeValue BitMask="0xff" Value="1" Description="Log contains entries"/>
+	</Attribute>
+	<Attribute AttributeId="21" AttributeName="Log Overrun" Length="1" ReadOnly="true" HexDisplay="false">
+		<AttributeValue BitMask="0xff" Value="0" Description="No Log Overrun"/>
+		<AttributeValue BitMask="0xff" Value="1" Description="Log Overrun"/>
+	</Attribute>
+	<!-- 3 bytes for "24-bit error format" -->
+	<Attribute AttributeId="22" AttributeName="Sequential Event Access" Length="3" ReadOnly="true" HexDisplay="true">
+		<!-- for "24-bit error format" -->
+		<AttributeValue BitMask="0x08" Value="0x00" Description="Device (remote)"/>
+		<AttributeValue BitMask="0x08" Value="0x08" Description="Master/Port"/>
+		<AttributeValue BitMask="0x30" Value="0x10" Description="Notification"/>
+		<AttributeValue BitMask="0x30" Value="0x20" Description="Warning"/>
+		<AttributeValue BitMask="0x30" Value="0x30" Description="Error"/>
+		<AttributeValue BitMask="0xC0" Value="0x40" Description="single shot"/>
+		<AttributeValue BitMask="0xC0" Value="0x80" Description="disappears"/>
+		<AttributeValue BitMask="0xC0" Value="0xC0" Description="appears"/>
+	</Attribute>
+	<Attribute AttributeId="24" AttributeName="Event Identifier Format" Length="1" ReadOnly="false" HexDisplay="false">
+		<AttributeValue BitMask="0xff" Value="0" Description="32-bit object model/error format"/>
+		<AttributeValue BitMask="0xff" Value="1" Description="48-bit object model/error format"/>
+		<AttributeValue BitMask="0xff" Value="2" Description="64-bit object model/error format"/>
+		<AttributeValue BitMask="0xff" Value="3" Description="16-bit unique identifier value"/>
+		<AttributeValue BitMask="0xff" Value="4" Description="24-bit error format"/>
+		<AttributeValue BitMask="0xff" Value="255" Description="Product specific - fixed form"/>
+	</Attribute>
+	<Service ServiceId="0x05" Name="Reset">
+		<!-- "Reset Type": 0 = Power cycle, 1 = Factory settings + Power cycle -->
+		<ServiceParameter Name="Reset Type (0, 1)" Length="1" HexDisplay="false"/>
+	</Service>
+	<Service ServiceId="0x18" Name="Get Member" Length="11" HexDisplay="true">
+		<ServiceParameter Name="Attribute (14)" Length="1" HexDisplay="false"/>
+		<ServiceParameter Name="Member ID (1-8)" Length="1" HexDisplay="false"/>
+	</Service>
+	<Service ServiceId="0x1B" Name="Remove Member" Length="11" HexDisplay="true">
+		<ServiceParameter Name="Attribute (14)" Length="1" HexDisplay="false"/>
+		<ServiceParameter Name="Member ID (1-8)" Length="1" HexDisplay="false"/>
+	</Service>
+</ObjectClass>

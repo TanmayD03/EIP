@@ -1,0 +1,87 @@
+# License Information
+
+EtherNet/IP Tool is licensed under the MIT License.
+
+MIT License
+
+Copyright (c) 2024 Hilscher Gesellschaft fuer Systemautomation mbH
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+## Third-Party Libraries
+
+This project uses several third-party libraries, each of which is distributed
+under its own license. Below is a list of all the libraries used, along with
+their respective licenses.
+
+### Library: LibEtherNetIPV2
+- License: MIT License
+- License File: Licenses/LibEtherNetIPV2_License.txt.
+
+### Library: DtlsClient
+- License: LGPL License 2.1
+- License File: Licenses/DtlsClient_License.
+- The Library is available at https://github.com/MarcBommert/dtlsclient.
+
+### Library: BouncyCastle
+- License: MIT License
+- License File: Licenses/BouncyCastle_License.md.
+- The Library is available at https://github.com/bcgit/bc-csharp.
+
+### Library: DotNetty
+- License: MIT License
+- License File: Licenses/DotNetty_License.txt.
+- The Library is available at https://github.com/Azure/DotNetty.
+
+### Library: SharpPcap
+- Version 6.2.5
+- License: LGPL License 3
+- License File: Licenses/Sharppcap_License.
+- The Library is available at https://github.com/dotpcap/sharppcap.
+
+### Library: PacketDotNet
+- Version 1.4.7
+- License: Mozilla Public License 2.0
+- License File: Licenses/PacketDotNet_License.
+- The Library is available at https://github.com/dotpcap/packetnet.
+
+### Library: System.Memory
+- License: MIT License
+- License File: Licenses/System.Memory_License.txt.
+
+### Library: System.Runtime.CompilerServices.Unsafe
+- License: MIT License
+- License File: Licenses/System.Runtime.CompilerServices.Unsafe_License.txt.
+
+### Library: System.Text.Encoding.CodePages
+- License: MIT License
+- License File: Licenses/System.Text.Encoding.CodePages_License.txt.
+
+### Library: Microsoft.Extensions.Logging
+- License: MIT License
+- License File: Licenses/Microsoft.Extensions_License.
+
+### Library: Microsoft.Extensions.Logging.Abstractions
+- License: MIT License
+- License File: Licenses/Microsoft.Extensions_License.
+
+### Library: Microsoft.Extensions.DependencyInjection.Abstractions
+- License: MIT License
+- License File: Licenses/Microsoft.Extensions_License.

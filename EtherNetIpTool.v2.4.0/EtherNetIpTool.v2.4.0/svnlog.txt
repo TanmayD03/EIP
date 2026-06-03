@@ -1,0 +1,1179 @@
+Hilscher EtherNet/IP Tool v2.4.0 
+Distribution timestamp: 23.02.2026 12:07:29,41 
+
+------------------------------------------------------------------------
+r131040 | TBaranczyk | 2025-12-10 15:31:53 +0100 (Mi, 10 Dez 2025) | 1 line
+
+[#####] - SoftAdapter: Use seed for the random number generator to overcome the issue of identical connection IDs used for some CL1 connections found by test case EIP_Master_SoftAdapter_64Slaves.
+------------------------------------------------------------------------
+r130385 | OKompani | 2025-11-11 17:16:15 +0100 (Di, 11 Nov 2025) | 1 line
+
+[#####] - Add Tooltip to bitfield attributes
+------------------------------------------------------------------------
+r130378 | OKompani | 2025-11-10 21:22:37 +0100 (Mo, 10 Nov 2025) | 1 line
+
+[#####] - Add support for ListIdentity extensions
+------------------------------------------------------------------------
+r130344 | OKompani | 2025-11-07 14:45:26 +0100 (Fr, 07 Nov 2025) | 2 lines
+
+[#####] - new Class3 connection getter function to get the underlying UCMM. 
+- Typo fix
+------------------------------------------------------------------------
+r130269 | DGroelle | 2025-11-05 11:33:21 +0100 (Mi, 05 Nov 2025) | 1 line
+
+[#####] - fixes for qos attributes 9 to 15
+------------------------------------------------------------------------
+r130265 | DGroelle | 2025-11-05 10:50:28 +0100 (Mi, 05 Nov 2025) | 1 line
+
+[#####] - add qos attributes 9 to 15
+------------------------------------------------------------------------
+r130168 | OKompani | 2025-10-31 20:02:11 +0100 (Fr, 31 Okt 2025) | 1 line
+
+[#####] - (PSEIP-1112) - Support Identity Object's instance attribute 25 (Application Profiles)
+------------------------------------------------------------------------
+r130014 | MBommert | 2025-10-30 13:28:15 +0100 (Do, 30 Okt 2025) | 1 line
+
+[#####] - For PSEIP-1124, test fields "remaining connection path size" and "reserved" of FwOpen error response to be set to zero always. Throw Exception otherwise. For more defensive testing.
+------------------------------------------------------------------------
+r128696 | OKompani | 2025-09-02 10:58:51 +0200 (Di, 02 Sep 2025) | 1 line
+
+[#####] - (PSEIP -1057) Add Ingress Egress Object class attribute 12 (Capabilities)
+------------------------------------------------------------------------
+r127830 | DGroelle | 2025-07-23 23:46:03 +0200 (Mi, 23 Jul 2025) | 1 line
+
+[#####] - Add Subject Alternative Name feature to createCSR service
+------------------------------------------------------------------------
+r126527 | DGroelle | 2025-05-20 13:57:34 +0200 (Di, 20 Mai 2025) | 1 line
+
+[#####] - Add overloaded function for CL3 connection with expected error codes
+------------------------------------------------------------------------
+r126287 | MBommert | 2025-05-12 17:48:12 +0200 (Mo, 12 Mai 2025) | 1 line
+
+[#####] - Randomize AND sequence the SenderContext field for better debugging/testing experience.
+------------------------------------------------------------------------
+r124493 | OKompani | 2025-01-16 10:22:06 +0100 (Do, 16 Jan 2025) | 1 line
+
+[#####] - Fixed File Object Download service issues.
+------------------------------------------------------------------------
+r124192 | MBommert | 2024-12-12 13:00:51 +0100 (Do, 12 Dez 2024) | 1 line
+
+[#####] - Fix missing bits in distribution after e-mail report 9. Dec 24, Banner Engineering, Dmitry Gringauz with issue around netAnalyzer integration
+------------------------------------------------------------------------
+r124120 | OKompani | 2024-12-09 20:56:01 +0100 (Mo, 09 Dez 2024) | 1 line
+
+[#####] - Project settings: Allow unsafe blocks
+------------------------------------------------------------------------
+r124066 | OKompani | 2024-12-05 22:55:18 +0100 (Do, 05 Dez 2024) | 1 line
+
+[#####] - Adapted to the official Ingress Egress Object Rev.1
+------------------------------------------------------------------------
+r123631 | MBommert | 2024-11-18 13:52:56 +0100 (Mo, 18 Nov 2024) | 1 line
+
+[#####] - Plugfest preparation, Scanner verification, Performance Testing: Add new convenience features for connection path parsing and network connection parameter decoding/encoding.
+------------------------------------------------------------------------
+r122144 | MBommert | 2024-08-20 21:56:57 +0200 (Di, 20 Aug 2024) | 1 line
+
+[#####] - Implement Large Forward Open support in LibSoftAdapter
+------------------------------------------------------------------------
+r122100 | KMichel | 2024-08-16 13:49:38 +0200 (Fr, 16 Aug 2024) | 1 line
+
+[#####] - Set version to v2.3.1
+------------------------------------------------------------------------
+r122098 | KMichel | 2024-08-16 13:20:04 +0200 (Fr, 16 Aug 2024) | 1 line
+
+[#####] - Set version to v2.3.0
+------------------------------------------------------------------------
+r122093 | TBaranczyk | 2024-08-16 11:31:25 +0200 (Fr, 16 Aug 2024) | 1 line
+
+[#####] - change license file names
+------------------------------------------------------------------------
+r122085 | TBaranczyk | 2024-08-15 11:35:04 +0200 (Do, 15 Aug 2024) | 1 line
+
+[#####] - Provide license information of 3rd party components
+------------------------------------------------------------------------
+r122050 | TBaranczyk | 2024-08-13 09:57:51 +0200 (Di, 13 Aug 2024) | 1 line
+
+[#####] - move the TCP/IP object elements so that all attributes remain visible (display issue since attribute 770, all user objects loaded)
+------------------------------------------------------------------------
+r122042 | TBaranczyk | 2024-08-12 16:02:25 +0200 (Mo, 12 Aug 2024) | 1 line
+
+[#####] - added TCP/IP vendor attribute 770: SNMP Enable
+------------------------------------------------------------------------
+r122032 | TBaranczyk | 2024-08-12 11:10:02 +0200 (Mo, 12 Aug 2024) | 1 line
+
+[#####] - Add clear button for TCP/IP Attribute 11 (Last Conflict Detected)
+------------------------------------------------------------------------
+r122029 | KMichel | 2024-08-12 09:34:05 +0200 (Mo, 12 Aug 2024) | 1 line
+
+[#####] - Fixed typos
+------------------------------------------------------------------------
+r120757 | MBommert | 2024-05-29 16:00:36 +0200 (Mi, 29 Mai 2024) | 1 line
+
+[#####] - Also have large FwOpen support for class3 connections (still experimental)
+------------------------------------------------------------------------
+r120741 | MBommert | 2024-05-29 12:50:52 +0200 (Mi, 29 Mai 2024) | 1 line
+
+[#####] - Add preliminary Large FwOpen support for cyclic connections (PSEIP-895). Try to improve data production performance.
+------------------------------------------------------------------------
+r120649 | MBommert | 2024-05-27 10:56:57 +0200 (Mo, 27 Mai 2024) | 1 line
+
+[#####] - Add methods SendRaw and ReceiveRaw to connection interface and derived classes for testing the encapsulation layers in python.
+------------------------------------------------------------------------
+r120584 | KMichel | 2024-05-23 15:22:34 +0200 (Do, 23 Mai 2024) | 1 line
+
+[#####] - Respect ODVA tademark "EtherNet/IP (TM)"
+------------------------------------------------------------------------
+r120582 | KMichel | 2024-05-23 14:51:47 +0200 (Do, 23 Mai 2024) | 1 line
+
+[#####] - Install license.txt and fix version number in Form1.cs to v2.2.4
+------------------------------------------------------------------------
+r120580 | KMichel | 2024-05-23 14:37:45 +0200 (Do, 23 Mai 2024) | 1 line
+
+[#####] - Added MIT license file (https://choosealicense.com/licenses/mit/)
+------------------------------------------------------------------------
+r120388 | MBommert | 2024-05-15 09:37:30 +0200 (Mi, 15 Mai 2024) | 1 line
+
+[#####] - Fix accidental removal of encap seqeuence count incrementing
+------------------------------------------------------------------------
+r120329 | MBommert | 2024-05-13 12:50:38 +0200 (Mo, 13 Mai 2024) | 1 line
+
+[#####] - Add LLDP Management object to EtherNet/IP Tool
+------------------------------------------------------------------------
+r120233 | MBommert | 2024-05-08 10:47:01 +0200 (Mi, 08 Mai 2024) | 1 line
+
+[#####] - Allow sending FwClose when connection is not open. Have a suspend production button to reliably trigger the O2T timeout in the device.
+------------------------------------------------------------------------
+r119769 | MBommert | 2024-04-09 18:57:30 +0200 (Di, 09 Apr 2024) | 1 line
+
+[#####] - Improve on LLDP data table support
+------------------------------------------------------------------------
+r119760 | MBommert | 2024-04-09 11:53:29 +0200 (Di, 09 Apr 2024) | 1 line
+
+[#####] - Fix LLDP DT TBL TTL attribute width as spotted by David. Address issue where data is not pushed into hex view whenever a new tab page is added. Change hide/unhide objects functionality to abort on encapsulation errors and timeouts to keep the form responsive.
+------------------------------------------------------------------------
+r119727 | MBommert | 2024-04-05 15:47:44 +0200 (Fr, 05 Apr 2024) | 1 line
+
+[#####] - Add preliminary LLDP datatable support to assist in feature development/testing
+------------------------------------------------------------------------
+r119319 | MBommert | 2024-03-15 11:34:36 +0100 (Fr, 15 Mrz 2024) | 1 line
+
+[#####] - Just add some tooltips for Hilscher CIP Diag mallinfo textboxes, remove stray empty button from diag panel
+------------------------------------------------------------------------
+r118431 | MBommert | 2024-02-01 23:03:48 +0100 (Do, 01 Feb 2024) | 1 line
+
+[#####] - Fix PDC object Tab
+------------------------------------------------------------------------
+r118295 | KMichel | 2024-01-30 08:13:07 +0100 (Di, 30 Jan 2024) | 1 line
+
+[#####] - Set version to v2.2.4
+------------------------------------------------------------------------
+r118293 | KMichel | 2024-01-30 08:10:49 +0100 (Di, 30 Jan 2024) | 1 line
+
+[#####] - Correct version information
+------------------------------------------------------------------------
+r118290 | KMichel | 2024-01-30 07:43:00 +0100 (Di, 30 Jan 2024) | 1 line
+
+[#####] - Remove build output folders "bin" and "obj" and set svn ignore property for these folders so that they won't be committed next time.
+------------------------------------------------------------------------
+r117928 | MBommert | 2023-12-21 11:45:13 +0100 (Do, 21 Dez 2023) | 1 line
+
+[#####] - Fix
+------------------------------------------------------------------------
+r117927 | MBommert | 2023-12-21 11:44:23 +0100 (Do, 21 Dez 2023) | 1 line
+
+[#####] - Fix
+------------------------------------------------------------------------
+r117921 | MBommert | 2023-12-21 10:51:58 +0100 (Do, 21 Dez 2023) | 1 line
+
+[#####] - Cleanup
+------------------------------------------------------------------------
+r117918 | MBommert | 2023-12-21 10:35:17 +0100 (Do, 21 Dez 2023) | 1 line
+
+[#####] - Split DHCP Server stuff into new application
+------------------------------------------------------------------------
+r117803 | KMichel | 2023-12-16 10:30:23 +0100 (Sa, 16 Dez 2023) | 1 line
+
+[#####] - Adapt version in distribution batch file to match the version in Form1.cs
+------------------------------------------------------------------------
+r117377 | MBommert | 2023-11-20 14:02:30 +0100 (Mo, 20 Nov 2023) | 1 line
+
+[#####] - Commit recent changes of latency test
+------------------------------------------------------------------------
+r117338 | MBommert | 2023-11-17 16:42:57 +0100 (Fr, 17 Nov 2023) | 1 line
+
+[#####] - Commit my recent changes for performance testing: Write pcap, histogramm, improve report, convenience stuff, will finalize for Plugfest, ongoing
+------------------------------------------------------------------------
+r117325 | TBaranczyk | 2023-11-17 14:10:36 +0100 (Fr, 17 Nov 2023) | 1 line
+
+[#####] - add further IO-link wireless specific cip objects according to PSNPXEISIOLM-73 (vendor specific)
+------------------------------------------------------------------------
+r117270 | MBommert | 2023-11-14 14:32:01 +0100 (Di, 14 Nov 2023) | 1 line
+
+[#####] - Fix DTSL source port being not consistent. Send close_notify before closing DTLS connection. Softmaster needs further attention with regards to DTLS.
+------------------------------------------------------------------------
+r117238 | MBommert | 2023-11-13 10:30:15 +0100 (Mo, 13 Nov 2023) | 1 line
+
+[#####] - Fix build, fix Seqeuential Get of diag object
+------------------------------------------------------------------------
+r117078 | TBaranczyk | 2023-11-08 10:40:05 +0100 (Mi, 08 Nov 2023) | 1 line
+
+[#####] - remove temporary SetAttrAll service because of wrong data format being used
+------------------------------------------------------------------------
+r117038 | TBaranczyk | 2023-11-07 14:37:01 +0100 (Di, 07 Nov 2023) | 1 line
+
+[#####] - remove deprecated object 
+------------------------------------------------------------------------
+r117019 | TBaranczyk | 2023-11-07 10:50:44 +0100 (Di, 07 Nov 2023) | 1 line
+
+[#####] - update io link wireless related cip objects from revision 1 to 2 (according to migration SMI from V1.1 to V1.1.3)
+------------------------------------------------------------------------
+r115591 | MBommert | 2023-08-21 20:08:33 +0200 (Mo, 21 Aug 2023) | 1 line
+
+[#####] - Add pool overflow bit and diag object attribute 12: "taglist dump".
+------------------------------------------------------------------------
+r115221 | MBommert | 2023-08-02 16:51:20 +0200 (Mi, 02 Aug 2023) | 1 line
+
+[#####] - Fix and minor stuff I did for reproducing NXS-36514 without success
+------------------------------------------------------------------------
+r115136 | MBommert | 2023-07-31 14:01:43 +0200 (Mo, 31 Jul 2023) | 1 line
+
+[#####] - Extend Hilscher diag object by mallinfo and total heap size parameters.
+------------------------------------------------------------------------
+r114731 | MBommert | 2023-07-12 00:18:20 +0200 (Mi, 12 Jul 2023) | 1 line
+
+[#####] - Add Hilscher diag object tab, replacing 'misc' feature 'Show Firmware Info'.
+------------------------------------------------------------------------
+r114706 | MBommert | 2023-07-11 10:34:09 +0200 (Di, 11 Jul 2023) | 1 line
+
+[#####] - Improve distribution script to pull svn log into file to provide a cheap changelog
+------------------------------------------------------------------------
+r114702 | MBommert | 2023-07-11 09:36:40 +0200 (Di, 11 Jul 2023) | 1 line
+
+[#####] - Bump version again (I have released V2.2.2 internally towards ALU und WRI)
+------------------------------------------------------------------------
+r114660 | MBommert | 2023-07-07 17:05:38 +0200 (Fr, 07 Jul 2023) | 1 line
+
+[#####] - Change object/tab hiding feature to more defensive approach.
+------------------------------------------------------------------------
+r114572 | MBommert | 2023-07-04 17:11:41 +0200 (Di, 04 Jul 2023) | 1 line
+
+[#####] - Add PDC object to EIPTool
+------------------------------------------------------------------------
+r114530 | MBommert | 2023-06-30 16:09:36 +0200 (Fr, 30 Jun 2023) | 1 line
+
+[#####] - Bugfix: Connection sizes of zero in O2T direction (e.g. InputOnly, ListenOnly) were broken, since we sent frames with a few bytes in this case.
+------------------------------------------------------------------------
+r114395 | KMichel | 2023-06-26 08:36:17 +0200 (Mo, 26 Jun 2023) | 1 line
+
+[#####] - Set version to v2.2.1
+------------------------------------------------------------------------
+r114394 | MBommert | 2023-06-23 23:39:56 +0200 (Fr, 23 Jun 2023) | 1 line
+
+[#####] - Bugfix: Start application anyway if user refuses to install the DHCP service. Bum p version to V2.2.1
+------------------------------------------------------------------------
+r113321 | OKompani | 2023-04-17 11:32:11 +0200 (Mo, 17 Apr 2023) | 1 line
+
+[#####] - Fixed fragment size in FileDownload service last packet. 
+------------------------------------------------------------------------
+r113159 | MBommert | 2023-04-11 11:44:18 +0200 (Di, 11 Apr 2023) | 1 line
+
+[#####] - Assembly object, attr 2 'member list': Clear view (listbox) before trying to fetch the attribute, so that if we fail, the listbox is cleared subsequently.
+------------------------------------------------------------------------
+r112709 | MBommert | 2023-03-22 11:34:43 +0100 (Mi, 22 Mrz 2023) | 1 line
+
+[#####] - Set Hilscher Icon for NetAnalyzer form. Disable buttons "..." for PathBuilder which never was correct. We will replace this with maybe by only a path interpreter in the future (may based on the path parser we also use in the stack).
+------------------------------------------------------------------------
+r112696 | KMichel | 2023-03-22 09:11:54 +0100 (Mi, 22 Mrz 2023) | 1 line
+
+[#####] - Set version to "v2.2.0".
+------------------------------------------------------------------------
+r112695 | KMichel | 2023-03-22 09:10:47 +0100 (Mi, 22 Mrz 2023) | 1 line
+
+[#####] - Set version from "v2.2" to "v2.2.0".
+------------------------------------------------------------------------
+r112685 | MBommert | 2023-03-21 15:27:04 +0100 (Di, 21 Mrz 2023) | 1 line
+
+[#####] - Remove outdated documentation of EtherNet/Ip Tool from distribution
+------------------------------------------------------------------------
+r112684 | KMichel | 2023-03-21 15:22:18 +0100 (Di, 21 Mrz 2023) | 1 line
+
+[#####] - Remove accidentally committed folders "bin" and "obj" and set SVN ignore property
+------------------------------------------------------------------------
+r112676 | KMichel | 2023-03-21 13:19:26 +0100 (Di, 21 Mrz 2023) | 1 line
+
+[#####] - Remove accidentally committed folders "bin" and "obj" and set SVN ignore property
+------------------------------------------------------------------------
+r112667 | MBommert | 2023-03-21 11:08:42 +0100 (Di, 21 Mrz 2023) | 1 line
+
+[#####] - Remove intermediate build files from VCS
+------------------------------------------------------------------------
+r112666 | MBommert | 2023-03-21 11:08:13 +0100 (Di, 21 Mrz 2023) | 1 line
+
+[#####] - Remove intermediate build files from VCS
+------------------------------------------------------------------------
+r112664 | MBommert | 2023-03-21 11:07:26 +0100 (Di, 21 Mrz 2023) | 1 line
+
+[#####] - Implement getters and setters for more vendor specific attributes
+------------------------------------------------------------------------
+r112572 | MBommert | 2023-03-16 14:25:14 +0100 (Do, 16 Mrz 2023) | 1 line
+
+[#####] - Ad support for new vendor specific attribute "DHCP Max. discovery interval" to TCP/IP interface object page
+------------------------------------------------------------------------
+r112571 | MBommert | 2023-03-16 14:14:57 +0100 (Do, 16 Mrz 2023) | 1 line
+
+[#####] - Remove double click handler and "tab name compression feature"
+------------------------------------------------------------------------
+r112570 | MBommert | 2023-03-16 14:11:23 +0100 (Do, 16 Mrz 2023) | 1 line
+
+[#####] - Add netmask of selected network interface to preferences/registry and correctly provide the DHCP server with it
+------------------------------------------------------------------------
+r112547 | KMichel | 2023-03-16 11:13:43 +0100 (Do, 16 Mrz 2023) | 1 line
+
+[#####] - Set SVN ignore property
+------------------------------------------------------------------------
+r112544 | MBommert | 2023-03-16 10:50:44 +0100 (Do, 16 Mrz 2023) | 1 line
+
+[#####] - Rework Kai's implementation of user object tab hiding to idempotent approach based on a dictionary and without reparsing tab page names.
+------------------------------------------------------------------------
+r112536 | KMichel | 2023-03-15 18:45:02 +0100 (Mi, 15 Mrz 2023) | 1 line
+
+[#####] - Add check box that hides tabs of unsupported CIP objects
+------------------------------------------------------------------------
+r112516 | MBommert | 2023-03-15 14:30:05 +0100 (Mi, 15 Mrz 2023) | 1 line
+
+[#####] - Add option client identifier to TCP/IP object tab page
+------------------------------------------------------------------------
+r112456 | MBommert | 2023-03-13 11:57:37 +0100 (Mo, 13 Mrz 2023) | 1 line
+
+[#####] - Beautify
+------------------------------------------------------------------------
+r112455 | MBommert | 2023-03-13 11:48:17 +0100 (Mo, 13 Mrz 2023) | 1 line
+
+[#####] - Send RegisterSession/UnregisterSession for TLS connections as well
+------------------------------------------------------------------------
+r112451 | MBommert | 2023-03-13 10:13:30 +0100 (Mo, 13 Mrz 2023) | 1 line
+
+[#####] - Fix sent I/O data being messed up in char range [0x80 ..] due to unintended character encoding for NXS-35755
+------------------------------------------------------------------------
+r112417 | MBommert | 2023-03-09 21:59:52 +0100 (Do, 09 Mrz 2023) | 2 lines
+
+[#####] - Iterate on DHCP server
+
+------------------------------------------------------------------------
+r112416 | MBommert | 2023-03-09 21:55:46 +0100 (Do, 09 Mrz 2023) | 1 line
+
+[#####] - Iterate on DHCP server
+------------------------------------------------------------------------
+r112402 | MBommert | 2023-03-09 14:40:18 +0100 (Do, 09 Mrz 2023) | 1 line
+
+[#####] - Iterate on DHCP server
+------------------------------------------------------------------------
+r112379 | MBommert | 2023-03-09 00:28:48 +0100 (Do, 09 Mrz 2023) | 1 line
+
+[#####] - Build Assembly DHCPServer into a dll instead of an exe
+------------------------------------------------------------------------
+r112378 | MBommert | 2023-03-09 00:23:19 +0100 (Do, 09 Mrz 2023) | 1 line
+
+[#####] - Iterate on DHCP server
+------------------------------------------------------------------------
+r112374 | MBommert | 2023-03-08 16:55:42 +0100 (Mi, 08 Mrz 2023) | 1 line
+
+[#####] - Implement DHCP server into EIPTool for hands-on testing of our client implementation and option flavours and any other further experiments.
+------------------------------------------------------------------------
+r112301 | MBommert | 2023-03-06 14:57:41 +0100 (Mo, 06 Mrz 2023) | 1 line
+
+[#####] - Add setter for multicast start address (TCP/IP object instance attribute 9)
+------------------------------------------------------------------------
+r111626 | MBommert | 2023-01-31 10:15:04 +0100 (Di, 31 Jan 2023) | 1 line
+
+[#####] - Fix parsing of CC instance attributes 7 and 10 (config data bytestrings)
+------------------------------------------------------------------------
+r111601 | MBommert | 2023-01-27 09:08:40 +0100 (Fr, 27 Jan 2023) | 1 line
+
+[#####] - Changes to SoftAdapter/LibEtherNetIPV2 for multi-instantiation on different virtual IP addresses
+------------------------------------------------------------------------
+r111147 | MBommert | 2023-01-02 09:47:56 +0100 (Mo, 02 Jan 2023) | 1 line
+
+[#####] - Implement printing of HTML report
+------------------------------------------------------------------------
+r111146 | MBommert | 2023-01-01 21:33:31 +0100 (So, 01 Jan 2023) | 1 line
+
+[#####] - Calculate all connection statistics as required for Plugfest Performance Test
+------------------------------------------------------------------------
+r111143 | MBommert | 2022-12-23 01:55:23 +0100 (Fr, 23 Dez 2022) | 1 line
+
+[#####] - Add netAnalyzer support to assess the latency of EtherNet/IP class 0/1 connections
+------------------------------------------------------------------------
+r111139 | OKompani | 2022-12-21 13:17:26 +0100 (Mi, 21 Dez 2022) | 1 line
+
+[#####] - Applying uS resolution instead of mS resolution for connection RPI 
+------------------------------------------------------------------------
+r111136 | KMichel | 2022-12-21 11:50:09 +0100 (Mi, 21 Dez 2022) | 1 line
+
+[#####] - Set version to v2.1.2
+------------------------------------------------------------------------
+r111134 | KMichel | 2022-12-21 11:45:40 +0100 (Mi, 21 Dez 2022) | 1 line
+
+[#####] - Correct version to v2.1.1
+------------------------------------------------------------------------
+r111130 | KMichel | 2022-12-21 08:17:36 +0100 (Mi, 21 Dez 2022) | 1 line
+
+[#####] - Reduce service timeout to 100ms when updating status of DLR participants.
+------------------------------------------------------------------------
+r110908 | MBommert | 2022-12-09 12:35:12 +0100 (Fr, 09 Dez 2022) | 1 line
+
+[#####] - Switch target platform to .NET Framework V4.8
+------------------------------------------------------------------------
+r110907 | MBommert | 2022-12-09 12:00:13 +0100 (Fr, 09 Dez 2022) | 1 line
+
+[#####] - Some changes for robustness and performance. Slight change of CyclicProducer() constructor
+------------------------------------------------------------------------
+r110839 | KMichel | 2022-12-08 09:18:23 +0100 (Do, 08 Dez 2022) | 1 line
+
+[#####] - DLR Manager: clear participants list before discovering.
+------------------------------------------------------------------------
+r110837 | KMichel | 2022-12-08 08:58:31 +0100 (Do, 08 Dez 2022) | 1 line
+
+[#####] - Fix device discovery in DLR Manager
+------------------------------------------------------------------------
+r110723 | KMichel | 2022-12-01 06:55:39 +0100 (Do, 01 Dez 2022) | 1 line
+
+[#####] - Make version numbers consistent (FILE Form1.cs LINE ~56 and batch file)
+------------------------------------------------------------------------
+r110681 | MBommert | 2022-11-29 15:39:56 +0100 (Di, 29 Nov 2022) | 1 line
+
+[#####] - Bump version number
+------------------------------------------------------------------------
+r110680 | MBommert | 2022-11-29 15:36:48 +0100 (Di, 29 Nov 2022) | 1 line
+
+[#####] - Update BouncyCastle crypto lib from V1.8.0.0 to V1.9.0.0 to allow authentication with 384 bit keys
+------------------------------------------------------------------------
+r110582 | MBommert | 2022-11-25 12:37:09 +0100 (Fr, 25 Nov 2022) | 1 line
+
+[#####] - Cosmetic changes
+------------------------------------------------------------------------
+r110531 | MBommert | 2022-11-24 11:43:23 +0100 (Do, 24 Nov 2022) | 1 line
+
+[#####] - Prevent file system pollution of text file logging: If the logfile size exceeds a certain threshold, clear all its content and wrap around to file offset zero.
+------------------------------------------------------------------------
+r110235 | KMichel | 2022-11-15 11:19:24 +0100 (Di, 15 Nov 2022) | 3 lines
+
+[#####] - Set some SVN ignore properties for build artefacts. 
+- Add comment for version adaption in distribute.bat file.
+- Deactivate call of make_doc.bat as it fails currently due to missing tex stuff.
+------------------------------------------------------------------------
+r110194 | KMichel | 2022-11-14 08:51:02 +0100 (Mo, 14 Nov 2022) | 1 line
+
+[#####] - Set version to v2.0.2
+------------------------------------------------------------------------
+r110193 | KMichel | 2022-11-14 08:43:31 +0100 (Mo, 14 Nov 2022) | 1 line
+
+[#####] - Change to new Hilscher logo
+------------------------------------------------------------------------
+r110180 | KMichel | 2022-11-11 17:13:46 +0100 (Fr, 11 Nov 2022) | 1 line
+
+[#####] - Change to new Hilscher logo
+------------------------------------------------------------------------
+r109402 | MBommert | 2022-10-07 14:46:49 +0200 (Fr, 07 Okt 2022) | 1 line
+
+[#####] - Rework/Improve Assembly Instance Detection Algorithm
+------------------------------------------------------------------------
+r109048 | MBommert | 2022-09-20 11:40:11 +0200 (Di, 20 Sep 2022) | 1 line
+
+[#####] - Show CC instance attribute 6 "Connection Path" in ASCII encoding in MouseHover tooltip, so that the slave's IP becomes clear at a glance.
+------------------------------------------------------------------------
+r107157 | KMichel | 2022-05-31 11:10:06 +0200 (Di, 31 Mai 2022) | 1 line
+
+[#####] - Make tab control multi line capable. 
+------------------------------------------------------------------------
+r106944 | MBommert | 2022-05-19 14:46:41 +0200 (Do, 19 Mai 2022) | 1 line
+
+[#####] - Add support for CC class attributes (bitfields configured, diagnostic, active, ...).
+------------------------------------------------------------------------
+r106655 | MBommert | 2022-05-04 13:26:42 +0200 (Mi, 04 Mai 2022) | 1 line
+
+[#####] - When searching for Assemblies, also respect instance ID range starting at 0x80000000 (database-defined instances)
+------------------------------------------------------------------------
+r106594 | MBommert | 2022-04-29 13:09:53 +0200 (Fr, 29 Apr 2022) | 1 line
+
+[#####] - Add dedicated support Assembly Object
+------------------------------------------------------------------------
+r106550 | MBommert | 2022-04-28 10:34:05 +0200 (Do, 28 Apr 2022) | 1 line
+
+[#####] - Add CC object create/delete service support
+------------------------------------------------------------------------
+r106441 | MBommert | 2022-04-22 10:06:21 +0200 (Fr, 22 Apr 2022) | 1 line
+
+[#####] - Fix incoming process data not displayed
+------------------------------------------------------------------------
+r106284 | MBommert | 2022-04-13 13:58:41 +0200 (Mi, 13 Apr 2022) | 1 line
+
+[#####] - Fixes, allow to collapse class names in tab control for better navigation
+------------------------------------------------------------------------
+r106245 | MBommert | 2022-04-11 18:14:01 +0200 (Mo, 11 Apr 2022) | 1 line
+
+[#####] - Implement setter for CC instance attribute 2
+------------------------------------------------------------------------
+r106232 | MBommert | 2022-04-11 10:27:07 +0200 (Mo, 11 Apr 2022) | 1 line
+
+[#####] - Add Set_Attributes_All support for CC object
+------------------------------------------------------------------------
+r106181 | MBommert | 2022-04-07 14:05:27 +0200 (Do, 07 Apr 2022) | 1 line
+
+[#####] - Improve on CC object interfacing
+------------------------------------------------------------------------
+r106153 | MBommert | 2022-04-06 17:52:55 +0200 (Mi, 06 Apr 2022) | 1 line
+
+[#####] - Add CC object to EtherNEt/IP tool
+------------------------------------------------------------------------
+r105856 | MBommert | 2022-03-28 12:42:27 +0200 (Mo, 28 Mrz 2022) | 1 line
+
+[#####] - Add Connected CIP Messaging feature to SoftAdapter
+------------------------------------------------------------------------
+r105715 | MBommert | 2022-03-22 10:17:39 +0100 (Di, 22 Mrz 2022) | 1 line
+
+[#####] - Add some debug code. Tolerate two second timeout in thread joining.
+------------------------------------------------------------------------
+r105714 | MBommert | 2022-03-22 10:17:22 +0100 (Di, 22 Mrz 2022) | 1 line
+
+[#####] - Add some debug code. Tolerate two second timeout in thread joining.
+------------------------------------------------------------------------
+r105676 | MBommert | 2022-03-18 17:10:21 +0100 (Fr, 18 Mrz 2022) | 1 line
+
+[#####] - Tolerate if multicast group cannot be joined in SoftAdapter (might be joined already)
+------------------------------------------------------------------------
+r105594 | MBommert | 2022-03-16 15:12:38 +0100 (Mi, 16 Mrz 2022) | 1 line
+
+[#####] - Fix padding of domainname when setting TCP/IP Interface object attr 5
+------------------------------------------------------------------------
+r104500 | MBommert | 2022-01-24 16:15:09 +0100 (Mo, 24 Jan 2022) | 1 line
+
+[#####] - Fix encap timeout dev test. Add new dev test (provoke TCP RST during WAIT_FIN_2).
+------------------------------------------------------------------------
+r103940 | ETreise | 2021-11-29 16:00:46 +0100 (Mo, 29 Nov 2021) | 1 line
+
+[#####] - Corrected CIP service response checks.
+------------------------------------------------------------------------
+r103939 | ETreise | 2021-11-29 15:59:37 +0100 (Mo, 29 Nov 2021) | 1 line
+
+[#####] - Revert text box "Rules Change Count" to writeable.
+------------------------------------------------------------------------
+r103938 | ETreise | 2021-11-29 15:03:11 +0100 (Mo, 29 Nov 2021) | 5 lines
+
+[#####] - Add attribute 14 IANA Port Admin in tab 0xF5 TCP/IP.
+Navigation by Tab now only focuses control elements and writable text boxes.
+Reorder navigation by Tab through controls: up to down and left to right.
+Move some controls to get equal distance between them.
+Set some text boxes to readonly, when only Get service is possible.
+------------------------------------------------------------------------
+r103417 | MBommert | 2021-11-02 15:12:48 +0100 (Di, 02 Nov 2021) | 1 line
+
+[#####] - Add ListInterfaces and ListServices encapsulation commands
+------------------------------------------------------------------------
+r103121 | MBommert | 2021-10-12 13:18:04 +0200 (Di, 12 Okt 2021) | 1 line
+
+[#####] - Set tool version to V2.0.1
+------------------------------------------------------------------------
+r102951 | ETreise | 2021-10-01 18:42:36 +0200 (Fr, 01 Okt 2021) | 2 lines
+
+[#####] - Increased receive socket timeout to avoid exceptions for cycle time > 100 ms.
+- Some minor corrections.
+------------------------------------------------------------------------
+r102843 | ETreise | 2021-09-28 15:03:26 +0200 (Di, 28 Sep 2021) | 1 line
+
+[#####] - Corrected RPI value in CIP Status description.
+------------------------------------------------------------------------
+r101858 | ETreise | 2021-08-03 15:06:44 +0200 (Di, 03 Aug 2021) | 1 line
+
+[#####] - Minor corrections.
+------------------------------------------------------------------------
+r101823 | ETreise | 2021-08-02 12:14:38 +0200 (Mo, 02 Aug 2021) | 1 line
+
+[#####] - Get/Remove Member service for user defined objects.
+------------------------------------------------------------------------
+r101820 | ETreise | 2021-07-30 19:24:11 +0200 (Fr, 30 Jul 2021) | 1 line
+
+[#####] - Get/Set Attributes All service for user defined objects.
+------------------------------------------------------------------------
+r101819 | ETreise | 2021-07-30 19:21:49 +0200 (Fr, 30 Jul 2021) | 1 line
+
+[#####] - Get/Set Attributes All for user defined objects.
+------------------------------------------------------------------------
+r101813 | ETreise | 2021-07-30 13:51:33 +0200 (Fr, 30 Jul 2021) | 1 line
+
+[#####] - Corrected CIP service response checks.
+------------------------------------------------------------------------
+r101809 | mbommert | 2021-07-30 11:55:25 +0200 (Fr, 30 Jul 2021) | 1 line
+
+[#####] - Fix for Eugen
+------------------------------------------------------------------------
+r101773 | mbommert | 2021-07-26 15:20:02 +0200 (Mo, 26 Jul 2021) | 1 line
+
+[#####] - Fix
+------------------------------------------------------------------------
+r101301 | mbommert | 2021-06-28 23:46:54 +0200 (Mo, 28 Jun 2021) | 1 line
+
+[#####] - Misc. fixes
+------------------------------------------------------------------------
+r101119 | KMichel | 2021-06-21 15:47:04 +0200 (Mo, 21 Jun 2021) | 1 line
+
+[#####] - Instance attributes of Track configuration object (0x93) do not support the set_attribute_single service. Relates to PSNPXEISIOLM-51.
+------------------------------------------------------------------------
+r100154 | mbommert | 2021-05-11 14:58:45 +0200 (Di, 11 Mai 2021) | 1 line
+
+[#####] - Move branch_v2dev to trunk
+------------------------------------------------------------------------
+r100151 | mbommert | 2021-05-11 14:50:26 +0200 (Di, 11 Mai 2021) | 1 line
+
+[#####] - Remove unused file
+------------------------------------------------------------------------
+r100150 | mbommert | 2021-05-11 14:49:21 +0200 (Di, 11 Mai 2021) | 1 line
+
+[#####] - Merge back latest changes from Kai and Eugen, we will now freeze the trunk branch and move the V2 branch to trunk
+------------------------------------------------------------------------
+r100149 | mbommert | 2021-05-11 14:43:19 +0200 (Di, 11 Mai 2021) | 1 line
+
+[#####] - Minor fixes to EIPToolV2
+------------------------------------------------------------------------
+r100099 | mbommert | 2021-05-07 19:23:52 +0200 (Fr, 07 Mai 2021) | 1 line
+
+[#####] - Rename LibEtherNEtIp to LibEtherNetIPV2
+------------------------------------------------------------------------
+r100098 | mbommert | 2021-05-07 19:23:36 +0200 (Fr, 07 Mai 2021) | 1 line
+
+[#####] - Rename LibEtherNEtIp to LibEtherNetIPV2
+------------------------------------------------------------------------
+r99982 | mbommert | 2021-05-05 08:25:13 +0200 (Mi, 05 Mai 2021) | 1 line
+
+[#####] - Commit recent changes of EIPTOOLV2 with respect to SoftMasterV2 implementation
+------------------------------------------------------------------------
+r99970 | mbommert | 2021-05-04 10:30:48 +0200 (Di, 04 Mai 2021) | 1 line
+
+[#####] - Commit recent changes for SoftMasterV2
+------------------------------------------------------------------------
+r99888 | mbommert | 2021-04-28 16:25:46 +0200 (Mi, 28 Apr 2021) | 1 line
+
+[#####] - Commit recent changes of LibEtherNetIP
+------------------------------------------------------------------------
+r99868 | mbommert | 2021-04-28 08:18:46 +0200 (Mi, 28 Apr 2021) | 1 line
+
+[#####] - Commit recent changes of EIPTOOLV2 with respect to SoftMasterV2 implementation
+------------------------------------------------------------------------
+r99667 | mbommert | 2021-04-19 16:42:25 +0200 (Mo, 19 Apr 2021) | 1 line
+
+[#####] - Exception handling, fixes
+------------------------------------------------------------------------
+r99643 | mbommert | 2021-04-14 08:42:15 +0200 (Mi, 14 Apr 2021) | 1 line
+
+[#####] - Commit my changes as dev branch. softmaster has to be built up again on the changes in the lib.
+------------------------------------------------------------------------
+r99233 | KMichel | 2021-03-26 07:48:30 +0100 (Fr, 26 Mrz 2021) | 1 line
+
+[#####] - Update SNMP.xml
+------------------------------------------------------------------------
+r99192 | KMichel | 2021-03-24 08:01:25 +0100 (Mi, 24 Mrz 2021) | 1 line
+
+[#####] - Correct bit index of "Reconnect enable" (Master Configuration)
+------------------------------------------------------------------------
+r99190 | mbommert | 2021-03-23 23:16:03 +0100 (Di, 23 Mrz 2021) | 1 line
+
+[#####] - Refactor DTLS connection into LibEtherNetIp for future use in SoftMaster and TestFramework
+------------------------------------------------------------------------
+r99171 | KMichel | 2021-03-23 12:58:05 +0100 (Di, 23 Mrz 2021) | 1 line
+
+[#####] - Add SNMP.xml
+------------------------------------------------------------------------
+r99130 | KMichel | 2021-03-22 11:55:20 +0100 (Mo, 22 Mrz 2021) | 1 line
+
+[#####] - LLDP Mgmt attribute 3 (msgTxHold) is now setable.
+------------------------------------------------------------------------
+r99119 | mbommert | 2021-03-22 11:09:12 +0100 (Mo, 22 Mrz 2021) | 1 line
+
+[#####] - Implement DTLS client authentication
+------------------------------------------------------------------------
+r99059 | mbommert | 2021-03-19 00:34:10 +0100 (Fr, 19 Mrz 2021) | 1 line
+
+[#####] - Rework TLS layer from .NET stack to BouncyCastle stack which gives better flexibility. Add support for client certificate chains vs. single leaf (EE) certificates."
+------------------------------------------------------------------------
+r99034 | KMichel | 2021-03-18 09:54:13 +0100 (Do, 18 Mrz 2021) | 1 line
+
+[#####] - Add LLDP_Management.xml
+------------------------------------------------------------------------
+r99032 | KMichel | 2021-03-18 09:30:17 +0100 (Do, 18 Mrz 2021) | 1 line
+
+[#####] - Support of encap services: ListServices and ListInterfaces
+------------------------------------------------------------------------
+r99031 | KMichel | 2021-03-18 09:29:18 +0100 (Do, 18 Mrz 2021) | 1 line
+
+[#####] - Send IO data depending on target T2O size. Otherwise connection might run into timeout.
+------------------------------------------------------------------------
+r99030 | mbommert | 2021-03-18 09:10:16 +0100 (Do, 18 Mrz 2021) | 1 line
+
+[#####] - Add some setters for EIPSecurity object
+------------------------------------------------------------------------
+r99017 | mbommert | 2021-03-17 12:57:10 +0100 (Mi, 17 Mrz 2021) | 1 line
+
+[#####] - Add object class code on tab pages
+------------------------------------------------------------------------
+r98968 | mbommert | 2021-03-15 16:39:30 +0100 (Mo, 15 Mrz 2021) | 1 line
+
+[#####] - Remove Umlaut from CSR subject, UTF-8 encoding caused problems for me with OpenSSL command line tool. needs future investigation
+------------------------------------------------------------------------
+r98966 | mbommert | 2021-03-15 14:54:35 +0100 (Mo, 15 Mrz 2021) | 1 line
+
+[#####] - Allow to create and delete Certificate Management object instances
+------------------------------------------------------------------------
+r98955 | mbommert | 2021-03-15 10:12:35 +0100 (Mo, 15 Mrz 2021) | 1 line
+
+[#####] - Bind to local interface also for DTLS connections
+------------------------------------------------------------------------
+r98950 | mbommert | 2021-03-15 09:32:55 +0100 (Mo, 15 Mrz 2021) | 1 line
+
+[#####] - Bind to local interface also for TLS connections
+------------------------------------------------------------------------
+r98916 | mbommert | 2021-03-10 16:43:27 +0100 (Mi, 10 Mrz 2021) | 1 line
+
+[#####] - Add ingress/egress object
+------------------------------------------------------------------------
+r98899 | mbommert | 2021-03-09 22:41:44 +0100 (Di, 09 Mrz 2021) | 1 line
+
+[#####] - Allow to decode certificate
+------------------------------------------------------------------------
+r98898 | mbommert | 2021-03-09 22:39:32 +0100 (Di, 09 Mrz 2021) | 1 line
+
+[#####] - Allow to decode certificate
+------------------------------------------------------------------------
+r98897 | mbommert | 2021-03-09 22:26:47 +0100 (Di, 09 Mrz 2021) | 1 line
+
+[#####] - Fix connection timeout for UCMM
+------------------------------------------------------------------------
+r98896 | mbommert | 2021-03-09 22:15:03 +0100 (Di, 09 Mrz 2021) | 1 line
+
+[#####] - Create_CSR
+------------------------------------------------------------------------
+r98895 | mbommert | 2021-03-09 22:11:10 +0100 (Di, 09 Mrz 2021) | 1 line
+
+[#####] - Create_CSR
+------------------------------------------------------------------------
+r98894 | mbommert | 2021-03-09 21:30:33 +0100 (Di, 09 Mrz 2021) | 1 line
+
+[#####] - Make some more security stuff settable directly on the tabpages
+------------------------------------------------------------------------
+r98891 | mbommert | 2021-03-09 18:01:15 +0100 (Di, 09 Mrz 2021) | 1 line
+
+[#####] - Allow to create and delete file object instances, allow to add remove TAs and TIs in security object
+------------------------------------------------------------------------
+r98884 | mbommert | 2021-03-09 14:23:57 +0100 (Di, 09 Mrz 2021) | 1 line
+
+[#####] - Add EIP Security object to tool
+------------------------------------------------------------------------
+r98878 | mbommert | 2021-03-09 11:52:11 +0100 (Di, 09 Mrz 2021) | 1 line
+
+[#####] - Add CIP Security object to tool
+------------------------------------------------------------------------
+r98877 | mbommert | 2021-03-09 11:24:30 +0100 (Di, 09 Mrz 2021) | 1 line
+
+[#####] - Add CertificateManegemnt object. Change loading of client certs
+------------------------------------------------------------------------
+r98819 | mbommert | 2021-03-04 15:24:35 +0100 (Do, 04 Mrz 2021) | 1 line
+
+[#####] - Load entire certificate chain from pfx file and add to windows root certificate store
+------------------------------------------------------------------------
+r98521 | ETreise | 2021-02-19 11:38:28 +0100 (Fr, 19 Feb 2021) | 1 line
+
+[#####] - Avoid exception after scrolling CIP Response Message in Expl. Msg tab.
+------------------------------------------------------------------------
+r97253 | MBommert | 2020-12-10 11:18:17 +0100 (Do, 10 Dez 2020) | 1 line
+
+[#####] - Bump version number
+------------------------------------------------------------------------
+r97252 | MBommert | 2020-12-10 11:13:39 +0100 (Do, 10 Dez 2020) | 1 line
+
+[#####] - Bump version number
+------------------------------------------------------------------------
+r97247 | MBommert | 2020-12-10 10:54:18 +0100 (Do, 10 Dez 2020) | 1 line
+
+[#####] - Fix
+------------------------------------------------------------------------
+r96972 | MBommert | 2020-11-25 12:34:50 +0100 (Mi, 25 Nov 2020) | 1 line
+
+[#####] - Improve cyclic send performance and timing
+------------------------------------------------------------------------
+r96888 | OKompani | 2020-11-23 09:32:09 +0100 (Mo, 23 Nov 2020) | 1 line
+
+[#####] - Fix. Added missed padding zeros in 32-bit pathes
+------------------------------------------------------------------------
+r96725 | mbommert | 2020-11-16 11:52:23 +0100 (Mo, 16 Nov 2020) | 1 line
+
+[#####] - Abort sequential OP on first timeout
+------------------------------------------------------------------------
+r96152 | OKompani | 2020-11-05 14:05:55 +0100 (Do, 05 Nov 2020) | 1 line
+
+[#####] - Fix in DiscoverDevices. SetTimeouts for a none-existing socket 
+------------------------------------------------------------------------
+r96023 | mbommert | 2020-11-02 09:01:36 +0100 (Mo, 02 Nov 2020) | 1 line
+
+[#####] - Fix deadlock on I/O connection close
+------------------------------------------------------------------------
+r95967 | mbommert | 2020-10-28 18:44:40 +0100 (Mi, 28 Okt 2020) | 1 line
+
+[#####] - Revert previous change "Allow unlimited timeout for ListIdentify receiveReply function", we need that timeout exception
+------------------------------------------------------------------------
+r95947 | mbommert | 2020-10-27 18:53:47 +0100 (Di, 27 Okt 2020) | 1 line
+
+[#####] - Allow unlimited timeout for ListIdentify receiveReply function
+------------------------------------------------------------------------
+r94854 | KMichel | 2020-09-28 11:35:54 +0200 (Mo, 28 Sep 2020) | 1 line
+
+[#####] - Corrected spelling
+------------------------------------------------------------------------
+r94719 | ETreise | 2020-09-22 11:33:15 +0200 (Di, 22 Sep 2020) | 1 line
+
+[#####] - Update and extend attribute values in IO-Link objects.
+------------------------------------------------------------------------
+r94594 | omidkompani | 2020-09-10 17:09:41 +0200 (Do, 10 Sep 2020) | 1 line
+
+[#####] - New ListIdentity security element
+------------------------------------------------------------------------
+r94476 | kai | 2020-09-04 09:12:38 +0200 (Fr, 04 Sep 2020) | 1 line
+
+[#####] - Add possibility to set Time Sync attribute 1 (PTP Enable)
+------------------------------------------------------------------------
+r94435 | Eugen | 2020-09-02 15:26:07 +0200 (Mi, 02 Sep 2020) | 1 line
+
+[#####] - Fix scrolling in Received Data view in Process Data tab.
+------------------------------------------------------------------------
+r94427 | Eugen | 2020-09-02 14:29:36 +0200 (Mi, 02 Sep 2020) | 1 line
+
+[#####] - Update IO-Link objects, add IO-Link Wireless objects.
+------------------------------------------------------------------------
+r94418 | Eugen | 2020-09-02 14:05:48 +0200 (Mi, 02 Sep 2020) | 1 line
+
+[#####] - Rename "CIP Event Log" in "Event Log".
+------------------------------------------------------------------------
+r94373 | MarcBommert | 2020-09-01 10:37:57 +0200 (Di, 01 Sep 2020) | 1 line
+
+[#####] - Fix
+------------------------------------------------------------------------
+r94310 | MarcBommert | 2020-08-28 10:54:23 +0200 (Fr, 28 Aug 2020) | 1 line
+
+[#####] - Fix
+------------------------------------------------------------------------
+r94292 | MarcBommert | 2020-08-27 11:10:44 +0200 (Do, 27 Aug 2020) | 1 line
+
+[#####] - Allow configuration of client certificate through Preferences Dialog
+------------------------------------------------------------------------
+r94288 | MarcBommert | 2020-08-27 10:13:22 +0200 (Do, 27 Aug 2020) | 1 line
+
+[#####] - Integrate File object with "Auto Repeat" feature
+------------------------------------------------------------------------
+r94287 | MarcBommert | 2020-08-27 10:02:22 +0200 (Do, 27 Aug 2020) | 1 line
+
+[#####] - Also decode values for some attributes of the file object
+------------------------------------------------------------------------
+r94281 | MarcBommert | 2020-08-26 17:14:11 +0200 (Mi, 26 Aug 2020) | 1 line
+
+[#####] - Bump version
+------------------------------------------------------------------------
+r94280 | MarcBommert | 2020-08-26 17:13:32 +0200 (Mi, 26 Aug 2020) | 1 line
+
+[#####] - Have file object support on regular tab page
+------------------------------------------------------------------------
+r94188 | omidkompani | 2020-08-21 09:05:22 +0200 (Fr, 21 Aug 2020) | 2 lines
+
+[#####] - The secure communication can use certificates in pfx format if available. 
+- Added file uplad/download to the file menu
+------------------------------------------------------------------------
+r94185 | MarcBommert | 2020-08-20 16:59:16 +0200 (Do, 20 Aug 2020) | 1 line
+
+[#####] - Merge changes made by Eugen
+------------------------------------------------------------------------
+r93707 | omidkompani | 2020-07-28 13:45:28 +0200 (Di, 28 Jul 2020) | 1 line
+
+[#####] - Fixed the console output
+------------------------------------------------------------------------
+r93388 | omidkompani | 2020-07-09 15:27:55 +0200 (Do, 09 Jul 2020) | 1 line
+
+[#####] - Fixed a variable name
+------------------------------------------------------------------------
+r93326 | omidkompani | 2020-07-08 14:24:23 +0200 (Mi, 08 Jul 2020) | 1 line
+
+[#####] - Added ListIdentity cipSecurity extension support
+------------------------------------------------------------------------
+r93220 | MarcBommert | 2020-07-06 12:14:51 +0200 (Mo, 06 Jul 2020) | 1 line
+
+[#####] - Add User Defined Objects as provided by Eugen
+------------------------------------------------------------------------
+r93219 | MarcBommert | 2020-07-06 12:10:21 +0200 (Mo, 06 Jul 2020) | 1 line
+
+[#####] - Fix as suggested by Eugen
+------------------------------------------------------------------------
+r93192 | MarcBommert | 2020-07-03 17:28:02 +0200 (Fr, 03 Jul 2020) | 1 line
+
+[#####] - Add I/O link port status use object description
+------------------------------------------------------------------------
+r92216 | MarcBommert | 2020-05-06 12:22:56 +0200 (Mi, 06 Mai 2020) | 1 line
+
+[#####] - Remove abort calls in consumer and producer. They cause problems in python softmaster. This will probably break TLS/DTLS, which has to be retested & fixed later.
+------------------------------------------------------------------------
+r92119 | MarcBommert | 2020-05-01 22:59:57 +0200 (Fr, 01 Mai 2020) | 1 line
+
+[#####] - Adapt distribution script
+------------------------------------------------------------------------
+r92098 | MarcBommert | 2020-04-30 14:56:35 +0200 (Do, 30 Apr 2020) | 1 line
+
+[#####] - Add support for DTLS I/O connections
+------------------------------------------------------------------------
+r91915 | kai | 2020-04-21 15:00:54 +0200 (Di, 21 Apr 2020) | 1 line
+
+[#####] - XML parser: make it possible to define attributes lengths unequal to 1, 2, 4 and 8. In that case , "HexDisplay" must be set to "true"
+------------------------------------------------------------------------
+r91892 | MarcBommert | 2020-04-20 13:11:42 +0200 (Mo, 20 Apr 2020) | 1 line
+
+[#####] - Commit recent change for testing the class 0 sequence count mapping, see PSEIP-156
+------------------------------------------------------------------------
+r91843 | MarcBommert | 2020-04-16 01:03:32 +0200 (Do, 16 Apr 2020) | 1 line
+
+[#####] - Fix overflow assertion of sequence count in cyclic producer
+------------------------------------------------------------------------
+r91678 | MarcBommert | 2020-04-07 13:46:10 +0200 (Di, 07 Apr 2020) | 1 line
+
+[#####] - Commit new function to grab received data item only from CyclicConsumer
+------------------------------------------------------------------------
+r90902 | MarcBommert | 2020-03-10 22:12:03 +0100 (Di, 10 Mrz 2020) | 1 line
+
+[#####] - Improve very simple class 3 message router fragmentation test code
+------------------------------------------------------------------------
+r90749 | MarcBommert | 2020-03-06 11:19:06 +0100 (Fr, 06 Mrz 2020) | 1 line
+
+[#####] - Add very simple class 3 message router fragmentation test code
+------------------------------------------------------------------------
+r90212 | omidkompani | 2020-02-20 15:22:45 +0100 (Do, 20 Feb 2020) | 1 line
+
+[#####] - ThreadAbortException handler
+------------------------------------------------------------------------
+r89499 | kai | 2020-02-04 15:19:10 +0100 (Di, 04 Feb 2020) | 1 line
+
+[#####] - Add possibility to open class0 connections
+------------------------------------------------------------------------
+r88136 | kai | 2019-12-05 09:59:42 +0100 (Do, 05 Dez 2019) | 1 line
+
+[#####] - Meaningless commit message no one will ever read again ;-)
+------------------------------------------------------------------------
+r87749 | MarcBommert | 2019-11-21 10:46:03 +0100 (Do, 21 Nov 2019) | 1 line
+
+[#####] - Cleanup for new release: also distribute softadapter in source code
+------------------------------------------------------------------------
+r87747 | MarcBommert | 2019-11-21 10:30:19 +0100 (Do, 21 Nov 2019) | 1 line
+
+[#####] - Cleanup for new release
+------------------------------------------------------------------------
+r87746 | MarcBommert | 2019-11-21 10:26:28 +0100 (Do, 21 Nov 2019) | 1 line
+
+[#####] - Cleanup for new release
+------------------------------------------------------------------------
+r87742 | MarcBommert | 2019-11-20 21:20:23 +0100 (Mi, 20 Nov 2019) | 1 line
+
+[#####] - Forgot those commits on the TLS encapsulation layer
+------------------------------------------------------------------------
+r86533 | MarcBommert | 2019-10-15 16:17:45 +0200 (Di, 15 Okt 2019) | 1 line
+
+[#####] - Add experimental Security encapsulation
+------------------------------------------------------------------------
+r86334 | MarcBommert | 2019-10-02 17:05:33 +0200 (Mi, 02 Okt 2019) | 1 line
+
+[#####] - Remove unnecessary locks
+------------------------------------------------------------------------
+r86273 | MarcBommert | 2019-09-30 16:39:52 +0200 (Mo, 30 Sep 2019) | 1 line
+
+[#####] - Implement ListInterfaces support for EIP SoftAdapter
+------------------------------------------------------------------------
+r86272 | MarcBommert | 2019-09-30 16:39:10 +0200 (Mo, 30 Sep 2019) | 1 line
+
+[#####] - Implement ListInterfaces support for EIP SoftAdapter
+------------------------------------------------------------------------
+r86264 | MarcBommert | 2019-09-30 16:17:44 +0200 (Mo, 30 Sep 2019) | 1 line
+
+[#####] - Implement ListServices support for EIP SoftAdapter
+------------------------------------------------------------------------
+r86263 | MarcBommert | 2019-09-30 16:17:02 +0200 (Mo, 30 Sep 2019) | 1 line
+
+[#####] - Implement ListServices support for EIP SoftAdapter
+------------------------------------------------------------------------
+r86256 | MarcBommert | 2019-09-30 15:14:24 +0200 (Mo, 30 Sep 2019) | 1 line
+
+[#####] - Add new feature to softadapter (retrieve last received sequence count value)
+------------------------------------------------------------------------
+r85754 | MarcBommert | 2019-09-16 13:43:24 +0200 (Mo, 16 Sep 2019) | 1 line
+
+[#####] - Fix LibEtherNetIP so that we can grab the received CIP/CPF data of a softmatser connection
+------------------------------------------------------------------------
+r85738 | MarcBommert | 2019-09-13 15:00:14 +0200 (Fr, 13 Sep 2019) | 1 line
+
+[#####] - Fix setting of Socket Option "address reuse"
+------------------------------------------------------------------------
+r84670 | MarcBommert | 2019-07-23 11:05:07 +0200 (Di, 23 Jul 2019) | 1 line
+
+[#####] - SoftAdapter: Add mechanism to suppress explicit response messages
+------------------------------------------------------------------------
+r84656 | MarcBommert | 2019-07-22 11:48:30 +0200 (Mo, 22 Jul 2019) | 1 line
+
+[#####] - Fix
+------------------------------------------------------------------------
+r84648 | MarcBommert | 2019-07-19 10:54:36 +0200 (Fr, 19 Jul 2019) | 1 line
+
+[#####] - Fix
+------------------------------------------------------------------------
+r84625 | MarcBommert | 2019-07-18 12:38:06 +0200 (Do, 18 Jul 2019) | 1 line
+
+[#####] - Push changes
+------------------------------------------------------------------------
+r84571 | MarcBommert | 2019-07-17 07:59:57 +0200 (Mi, 17 Jul 2019) | 1 line
+
+[#####] - Push changes
+------------------------------------------------------------------------
+r84511 | MarcBommert | 2019-07-12 15:11:09 +0200 (Fr, 12 Jul 2019) | 1 line
+
+[#####] - Fix
+------------------------------------------------------------------------
+r84486 | MarcBommert | 2019-07-11 17:05:33 +0200 (Do, 11 Jul 2019) | 1 line
+
+[#####] - Change demo for PSEISV5-53
+------------------------------------------------------------------------
+r83692 | MarcBommert | 2019-06-14 14:55:11 +0200 (Fr, 14 Jun 2019) | 1 line
+
+[#####] - Revert previous change. Also: Allow address reuse on IO receive socket
+------------------------------------------------------------------------
+r83691 | MarcBommert | 2019-06-14 14:09:15 +0200 (Fr, 14 Jun 2019) | 1 line
+
+[#####] - Shutdown IO receive socket before closing/recreating (for the softmaster)
+------------------------------------------------------------------------
+r83615 | MarcBommert | 2019-06-11 13:16:31 +0200 (Di, 11 Jun 2019) | 1 line
+
+[#####] - Commit recent changes w/r/t softmaster
+------------------------------------------------------------------------
+r83609 | MarcBommert | 2019-06-11 10:45:27 +0200 (Di, 11 Jun 2019) | 1 line
+
+[#####] - Commit recent changes w/r/t softmaster
+------------------------------------------------------------------------
+r83608 | MarcBommert | 2019-06-11 00:02:34 +0200 (Di, 11 Jun 2019) | 1 line
+
+[#####] - Commit recent changes w/r/t softmaster
+------------------------------------------------------------------------
+r83602 | MarcBommert | 2019-06-07 16:40:00 +0200 (Fr, 07 Jun 2019) | 1 line
+
+[#####] - Optimize
+------------------------------------------------------------------------
+r83601 | omidkompani | 2019-06-07 16:02:21 +0200 (Fr, 07 Jun 2019) | 1 line
+
+[#####] - New functions GetIoSocketReceive()/GetIoSocketSend()
+------------------------------------------------------------------------
+r83413 | MarcBommert | 2019-05-28 14:37:07 +0200 (Di, 28 Mai 2019) | 1 line
+
+[#####] - Commit recent changes to software adapter
+------------------------------------------------------------------------
+r83378 | MarcBommert | 2019-05-24 11:39:34 +0200 (Fr, 24 Mai 2019) | 1 line
+
+[#####] - Delete EtherNetIP DeepTest, add SoftAdapter
+------------------------------------------------------------------------
+r83033 | omidkompani | 2019-05-10 12:47:55 +0200 (Fr, 10 Mai 2019) | 1 line
+
+[#####] - Bug fix: Incorrect timeout value.
+------------------------------------------------------------------------
+r82356 | omidkompani | 2019-04-09 12:57:49 +0200 (Di, 09 Apr 2019) | 1 line
+
+[#####] - EipCommunication is now intanciated dynamic.
+------------------------------------------------------------------------
+r82304 | MarcBommert | 2019-04-08 09:23:54 +0200 (Mo, 08 Apr 2019) | 1 line
+
+[#####] - ADapt exception handling in CyclicConsumer
+------------------------------------------------------------------------
+r82295 | MarcBommert | 2019-04-07 14:43:20 +0200 (So, 07 Apr 2019) | 1 line
+
+[#####] - Build Doxygen PDF documentation for LibEtherNetIP class
+------------------------------------------------------------------------
+r82294 | MarcBommert | 2019-04-06 00:45:08 +0200 (Sa, 06 Apr 2019) | 1 line
+
+[#####] - Have new class SimpleScanner containing higher a single threaded ListIdentity variant
+------------------------------------------------------------------------
+r82282 | MarcBommert | 2019-04-05 14:01:54 +0200 (Fr, 05 Apr 2019) | 1 line
+
+[#####] - For omid: Handle all SocketExceptions internally in the consumer class
+------------------------------------------------------------------------
+r82275 | MarcBommert | 2019-04-05 11:39:10 +0200 (Fr, 05 Apr 2019) | 1 line
+
+[#####] - Abort the listener/producer threads in Dispose() since joining takes an unexpected amount of time.
+------------------------------------------------------------------------
+r82262 | MarcBommert | 2019-04-05 10:20:56 +0200 (Fr, 05 Apr 2019) | 1 line
+
+[#####] - Test commit for omid
+------------------------------------------------------------------------
+r82151 | MarcBommert | 2019-03-29 14:51:52 +0100 (Fr, 29 Mrz 2019) | 1 line
+
+[#####] - Document, cleanup
+------------------------------------------------------------------------
+r82124 | MarcBommert | 2019-03-28 14:20:12 +0100 (Do, 28 Mrz 2019) | 1 line
+
+[#####] - Cleanup, renames, indendation
+------------------------------------------------------------------------
+r82123 | MarcBommert | 2019-03-28 14:12:09 +0100 (Do, 28 Mrz 2019) | 1 line
+
+[#####] - Cleanup, renames, indendation
+------------------------------------------------------------------------
+r82122 | MarcBommert | 2019-03-28 13:29:30 +0100 (Do, 28 Mrz 2019) | 1 line
+
+[#####] - Cleanup, renames, indendation
+------------------------------------------------------------------------
+r82118 | MarcBommert | 2019-03-28 11:52:34 +0100 (Do, 28 Mrz 2019) | 1 line
+
+[#####] - Factor out SocketListener and SocketSender into Lib, get rid of dependency to Form1 and rename to CyclicSender/CyclicReceiver
+------------------------------------------------------------------------
+r82117 | omidkompani | 2019-03-28 10:55:13 +0100 (Do, 28 Mrz 2019) | 1 line
+
+[#####] - Modifications in EtherNetIPTool to adapt CIP file download.
+------------------------------------------------------------------------
+r81665 | MarcBommert | 2019-03-13 09:08:43 +0100 (Mi, 13 Mrz 2019) | 1 line
+
+[#####] - Push
+------------------------------------------------------------------------
+r81040 | MarcBommert | 2019-02-20 11:49:18 +0100 (Mi, 20 Feb 2019) | 1 line
+
+[#####] - Fix file upload
+------------------------------------------------------------------------
+r80725 | MarcBommert | 2019-02-06 11:16:28 +0100 (Mi, 06 Feb 2019) | 1 line
+
+[#####] - Add feature to grab diag information from Hilscher-specific CIP object class ID 0x403
+------------------------------------------------------------------------
+r79831 | MarcBommert | 2019-01-09 12:02:22 +0100 (Mi, 09 Jan 2019) | 1 line
+
+[#####] - Add feature "Electronic Keying" for UCCM Explicit requests
+------------------------------------------------------------------------
+r79715 | MarcBommert | 2019-01-03 10:34:23 +0100 (Do, 03 Jan 2019) | 1 line
+
+[#####] - Add distribution script
+------------------------------------------------------------------------
+r79429 | MarcBommert | 2018-12-06 16:32:14 +0100 (Do, 06 Dez 2018) | 1 line
+
+[#####] - Commit pending local (minor) changes
+------------------------------------------------------------------------
+r79139 | AndreasB | 2018-11-15 13:57:49 +0100 (Do, 15 Nov 2018) | 1 line
+
+[#####] - Add .vs folder to ignore list
+------------------------------------------------------------------------
+r79137 | AndreasB | 2018-11-15 13:54:18 +0100 (Do, 15 Nov 2018) | 1 line
+
+[#####] - Delete ".vs" folder
+------------------------------------------------------------------------
+r79136 | AndreasB | 2018-11-15 13:48:26 +0100 (Do, 15 Nov 2018) | 2 lines
+
+[#####] - Remove OEM Stuff
+Remove binaries and VS cache data and set svn:ignores
+------------------------------------------------------------------------
+r78180 | AndreasB | 2018-09-28 11:37:03 +0200 (Fr, 28 Sep 2018) | 1 line
+
+[#####] - move to trunk
+------------------------------------------------------------------------
+r78179 | AndreasB | 2018-09-28 11:36:19 +0200 (Fr, 28 Sep 2018) | 1 line
+
+[#####] - create trunk folder
+------------------------------------------------------------------------
