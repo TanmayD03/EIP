@@ -264,6 +264,21 @@ def main():
 
         print("EIP session registered.")
 
+        # Test Acyclic Class 3 Explicit Messaging
+        print("Testing Acyclic Class 3 (Explicit Messaging) - Reading Identity Object...")
+        try:
+            # Identity Object: Class 0x01, Instance 0x01, Attribute 0x01 (Vendor ID)
+            # By calling getAttrSingle, we send an unconnected/explicit message
+            # Note: The library handles encapsulation for explicit messages
+            identity_resp = eip_conn.getAttrSingle(0x01, 0x01, 0x01)
+            if identity_resp:
+                # The response will typically contain the 2-byte vendor ID in the data segment
+                print(f"Acyclic Class 3 response received (Raw): {identity_resp}")
+            else:
+                print("Acyclic Class 3 request failed or timed out.")
+        except Exception as explicit_err:
+            print(f"Acyclic Class 3 Error: {explicit_err}")
+
         print(f"Sending Forward Open request (O->T: {selected_profile['o_t_inst']} size {ot_size}, T->O: {selected_profile['t_o_inst']} size {to_size}, Cfg: {selected_profile['cfg_inst']})...")
 
         config_data = b'\x00' if selected_profile["cfg_size"] > 0 else None
