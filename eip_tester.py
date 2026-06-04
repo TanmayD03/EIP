@@ -176,30 +176,103 @@ def print_menu():
     for key, val in PROFILES.items():
         print(f"[{key}] {val['name']}")
 
-def run_test_cases(profile_id, df):
+def run_test_cases(profile_id, df, eip_conn, monitor_sock, ip):
     print(f"\n--- Running Test Cases from Excel for Profile {profile_id} ---")
 
-    # Filter the dataframe for the selected profile steps
-    # We look for steps that match the expected result description "For <Profile Name>..."
-    profile_name = PROFILES[profile_id]['name']
-
-    # Very basic parsing logic, iterating over rows to see what tests are required
     tests_run = 0
     for idx, row in df.iterrows():
         title = str(row.get('Title', ''))
         action = str(row.get('Step Action', ''))
+        expected = str(row.get('Step Expected Result', ''))
 
-        # We simulate the automation execution here
-        if "Class1 Connection" in action or "EtherNet/IP" in action:
-            print(f"Executing Test Case {row.get('S.No.', idx)}: {title}")
-            print(f"Action: {action}")
-            time.sleep(1) # Simulate test run
-            tests_run += 1
+        if pd.isna(action) or action.strip() == "" or action.lower() == "nan":
+            continue
 
-    if tests_run == 0:
-        print("No specific automation test cases found in the excel mapping for this specific string format, but test engine is ready.")
-    else:
-        print(f"Completed {tests_run} test cases from the Excel file.")
+        print(f"\n=== Test Case {row.get('S.No.', idx)}: {title} ===")
+        print(f"Action: {action}")
+        print(f"Expected: {expected}")
+
+        # Reset bits before next action
+        eip_conn.outAssem = [False] * len(eip_conn.outAssem)
+
+        action_lower = action.lower()
+
+        # Map actions to specific bits based on the Modbus map commands index
+        if "forward start" in action_lower:
+            eip_conn.outAssem[0] = True
+            print(">> INJECTING: Forward Start (Bit 0)")
+        elif "reverse start" in action_lower:
+            eip_conn.outAssem[3] = True
+            print(">> INJECTING: Reverse Start (Bit 3)")
+        elif "stop command" in action_lower:
+            eip_conn.outAssem[2] = True
+            print(">> INJECTING: Stop (Bit 2)")
+        elif "self test with trip" in action_lower:
+            eip_conn.outAssem[15] = True
+            print(">> INJECTING: Self Test With Trip (Bit 15)")
+        elif "self trip without trip" in action_lower or "self test without trip" in action_lower:
+            eip_conn.outAssem[14] = True
+            print(">> INJECTING: Self Test Without Trip (Bit 14)")
+        elif "logic test command" in action_lower or "logic test input" in action_lower:
+            eip_conn.outAssem[13] = True
+            print(">> INJECTING: Logic Test Input (Bit 13)")
+        elif "trip reset" in action_lower:
+            eip_conn.outAssem[5] = True
+            print(">> INJECTING: Trip Reset (Bit 5)")
+        elif "reset commands one by one" in action_lower:
+            # Testing reset starts counter (7), reset stops counter (8), thermal (9), run hour (10), energy (11)
+            eip_conn.outAssem[7] = True
+            eip_conn.outAssem[8] = True
+            eip_conn.outAssem[9] = True
+            eip_conn.outAssem[10] = True
+            eip_conn.outAssem[11] = True
+            print(">> INJECTING: Multiple Reset Commands (Bits 7, 8, 9, 10, 11)")
+        elif "class1 connection" in action_lower:
+            print(">> ACTION: Establishing Class 1 Connection (Already completed globally)")
+
+        print("Executing step and waiting for response packets...")
+        # Give the cyclic thread time to send the new O->T assembly and device to respond
+        time.sleep(1)
+
+        # Monitor the resulting T->O packets
+        packets_checked = 0
+        validation_passed = False
+
+        while packets_checked < 5:
+            try:
+                data, addr = monitor_sock.recvfrom(1024)
+                if addr[0] == ip:
+                    if len(data) >= 16:
+                        item_count = struct.unpack("<H", data[0:2])[0]
+                        if item_count >= 2:
+                            # Item 1 is Sequenced Address Item: Type(2) + Length(2) + ConnID(4) + SeqNum(4) = 12 bytes total.
+                            # So Item 2 starts at offset 2 + 12 = 14
+                            type2 = struct.unpack("<H", data[14:16])[0]
+                            len2 = struct.unpack("<H", data[16:18])[0]
+                            if type2 == 0x00b1:
+                                payload = data[18:18+len2]
+                                hex_payload = payload.hex()
+                                bin_payload = " ".join(f"{b:08b}" for b in payload)
+                                print(f"[{time.strftime('%H:%M:%S')}] T->O Data: HEX={hex_payload} | BIN={bin_payload}")
+
+                                all_zero = all(b == 0 for b in payload)
+                                if all_zero:
+                                    print("Validation: Bits are all 0.")
+                                else:
+                                    print("Validation: Bits are active!")
+
+                                packets_checked += 1
+                                validation_passed = True
+            except socket.timeout:
+                print("Waiting for EIP cyclic data...")
+                packets_checked += 1
+
+        if not validation_passed:
+            print("Warning: Did not receive sufficient cyclic validation packets (or CPF offset parsing failed).")
+
+        tests_run += 1
+
+    print(f"\n--- Completed {tests_run} test cases from the Excel file ---")
 
 def main():
     parser = argparse.ArgumentParser(description="Terminal version of EIPScan tool for TeSys Tera")
@@ -314,63 +387,40 @@ def main():
         print(f"EIP Error: {e}")
         return
 
-    # Execute Excel tests automation
-    if df is not None:
-        run_test_cases(profile_id, df)
-
-    # Step 4: Cyclic Data Monitoring and Automated Validation
+    # Execute Excel tests automation and monitoring
     try:
-        print("Starting UDP Cyclic Data Monitoring...")
-
         monitor_sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         monitor_sock.bind(("0.0.0.0", 2222))
         monitor_sock.settimeout(2.0)
 
-        packets_checked = 0
-        validation_passed = False
-
-        while packets_checked < 5:
-            try:
-                data, addr = monitor_sock.recvfrom(1024)
-                if addr[0] == args.ip:
-                    if len(data) >= 20:
-                        item_count = struct.unpack("<H", data[0:2])[0]
-                        if item_count >= 2:
+        if df is not None:
+            run_test_cases(profile_id, df, eip_conn, monitor_sock, args.ip)
+        else:
+            print("No Excel file loaded. Running basic generic monitoring...")
+            packets_checked = 0
+            while packets_checked < 5:
+                try:
+                    data, addr = monitor_sock.recvfrom(1024)
+                    if addr[0] == args.ip:
+                        if len(data) >= 20:
                             type2 = struct.unpack("<H", data[16:18])[0]
                             len2 = struct.unpack("<H", data[18:20])[0]
                             if type2 == 0x00b1:
                                 payload = data[20:20+len2]
-                                hex_payload = payload.hex()
-                                bin_payload = " ".join(f"{b:08b}" for b in payload)
-                                print(f"[{time.strftime('%H:%M:%S')}] T->O Data: HEX={hex_payload} | BIN={bin_payload}")
-
-                                all_zero = all(b == 0 for b in payload)
-                                if all_zero:
-                                    print("Validation: Bits are correctly starting at 0.")
-                                    validation_passed = True
-                                else:
-                                    print("Validation: Data detected! Bits are changing based on injection/configuration.")
-                                    validation_passed = True
-
+                                print(f"[{time.strftime('%H:%M:%S')}] T->O Data: HEX={payload.hex()}")
                                 packets_checked += 1
+                except socket.timeout:
+                    print("Waiting for EIP cyclic data...")
+                    packets_checked += 1
 
-            except socket.timeout:
-                print("Waiting for EIP cyclic data...")
-                packets_checked += 1
-
-        if validation_passed:
-            print("Automated data validation completed successfully.")
-        else:
-            print("Did not receive sufficient valid cyclic packets to validate.")
-
-        print("Stopping monitor...")
+        print("\nStopping monitor and closing EIP session...")
         eip_conn.prod_state = 0
         eip_conn.sendFwdCloseReq(selected_profile["t_o_inst"], selected_profile["o_t_inst"], selected_profile["cfg_inst"])
         eip_conn.unregisterSession()
         monitor_sock.close()
 
     except Exception as e:
-        print(f"Monitoring Error: {e}")
+        print(f"Test Execution/Monitoring Error: {e}")
 
 if __name__ == "__main__":
     main()
